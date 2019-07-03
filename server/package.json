@@ -16,7 +16,9 @@
     "update-sample-assets": "DATA=\"../../asset_client/sample_data/sample_updates.json\" node ./scripts/run_sample_updates.js",
     "make-fish": "DATA=\"../../fish_client/sample_data/core_types.json\" node ./scripts/seed_core_types.js",
     "seed-sample-fish": "DATA=\"../../fish_client/sample_data/sample_data.json\" node ./scripts/seed_sample_data.js",
-    "update-sample-fish": "DATA=\"../../fish_client/sample_data/sample_updates.json\" node ./scripts/run_sample_updates.js"
+    "update-sample-fish": "DATA=\"../../fish_client/sample_data/sample_updates.json\" node ./scripts/run_sample_updates.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -37,12 +39,14 @@
     "lodash": "^4.17.4",
     "protobufjs": "^6.8.0",
     "rethinkdb": "^2.3.3",
-    "sawtooth-sdk": "^1.0.0-rc"
+    "sawtooth-sdk": "^1.0.0-rc",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",
     "standard": "^10.0.3"
-  }
+  },
+  "snyk": true
 }
